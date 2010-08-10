@@ -1,0 +1,240 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "MainBaby"
+    BEGIN
+        MENUITEM "&About SafeSext...",           IDM_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "C&hange passphrase...",       ID_CHPASS
+        MENUITEM "Set passphrase timeout...",   ID_SETTIMEOUTS
+        MENUITEM "Forget passphrase now",       IDM_FORGET
+        MENUITEM SEPARATOR
+        MENUITEM "&Set Font...\tAlt+Enter",     IDM_FONT
+        MENUITEM "Set &Background Color...",    IDM_BGCOLOR
+        POPUP "Set Border Colors"
+        BEGIN
+            MENUITEM "Foreground...",               IDM_B_FGC
+            MENUITEM "Background...",               IDM_B_BGC
+        END
+        MENUITEM "Always on top",               ID_AOT
+        MENUITEM SEPARATOR
+        MENUITEM "Profile &Manager...",         ID_PROFILEMANAGER
+        MENUITEM "&Quit SafeSext\t(Alt+F4)",     IDM_CLOSE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_RETURN,      IDM_FONT,               VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 186, 55
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SafeSext Passphrase"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Enter passphrase:",IDC_STATIC,7,7,58,8
+    EDITTEXT        IDC_EDIT1,7,17,172,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,34,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,59,34,50,14
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 233, 103
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SafeSext Passphrase Change"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,17,219,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,7,41,219,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,7,65,219,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,82,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,59,82,50,14
+    LTEXT           "Old passphrase:",IDC_STATIC,7,7,52,8
+    LTEXT           "New passphrase:",IDC_STATIC,7,31,56,8
+    LTEXT           "Repeat passphrase:",IDC_STATIC,7,55,64,8
+END
+
+IDD_DIALOG3 DIALOG DISCARDABLE  0, 0, 174, 55
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SafeSext Passphrase Timeout"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Automatically forget passphrase after:",IDC_STATIC,7,7,
+                    118,8
+    EDITTEXT        IDC_EDIT1,7,17,52,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,7,34,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,59,34,50,14
+    LTEXT           "seconds",IDC_STATIC,61,19,28,8
+END
+
+IDD_PROFILES DIALOG DISCARDABLE  0, 0, 210, 161
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,52,16,151,64,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Create",IDC_CREATE,7,16,39,14
+    PUSHBUTTON      "Delete",IDC_DELETE,7,32,39,14
+    PUSHBUTTON      "Copy",IDC_CLONE,7,48,39,14
+    PUSHBUTTON      "Rename",IDC_RENAME,7,64,39,14
+    DEFPUSHBUTTON   "Launch with profile",IDOK,7,140,74,14
+    PUSHBUTTON      "Close",IDCANCEL,153,140,50,14
+    LTEXT           "Profiles:",IDC_STATIC,7,7,196,8
+    LTEXT           "Note: to launch SafeSext with a particular profile, use the /PROFILE=profilename command line switch.",
+                    IDC_STATIC,7,84,165,17
+    LTEXT           "Use /ONCE and /ONESESSION on the command line to set SafeSext to only stay open for one window open, or until the passphrase expires. (useful if you don't want to keep SafeSext running all the time)",
+                    IDC_STATIC,7,103,196,32
+END
+
+IDD_PROFILE_MOD DIALOG DISCARDABLE  0, 0, 194, 61
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT2,49,22,138,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,40,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,61,40,50,14
+    EDITTEXT        IDC_EDIT1,49,7,138,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Source:",IDC_STATIC,7,8,26,8
+    LTEXT           "Destination:",IDC_STATIC,7,24,38,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PROFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_PROFILE_MOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
