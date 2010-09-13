@@ -4,11 +4,11 @@ Right now almost exactly the same as SafeSex 0.35 except it's migrated to [Micro
 
 To make it compile I added
 
-<code>#ifndef IDC_STATIC</code>
+<code>#ifndef IDC_STATIC
 
-<code>#define IDC_STATIC				-1</code>
+#define IDC_STATIC				-1
 
-<code>#endif</code>
+#endif</code>
 
 to resource.h and changed
 <code>#include "afxres.h"</code>
