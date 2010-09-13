@@ -2,15 +2,15 @@ SafeSext 0.35.1
 ---------------
 Right now almost exactly the same as SafeSex 0.35 except it's migrated to [Microsoft Visual C++ 2010 Express.](http://www.microsoft.com/express/Downloads/Download-2010.aspx)
 
-Added
-<code>
-#ifndef IDC_STATIC`
-#define IDC_STATIC				-1
-#endif
-</code>
-to resource.h
+To make it compile I added
 
-Changed
+<code>#ifndef IDC_STATIC</code>
+
+<code>#define IDC_STATIC				-1</code>
+
+<code>#endif</code>
+
+to resource.h and changed
 <code>#include "afxres.h"</code>
 to
 <code>#include "windows.h"</code>
@@ -50,10 +50,10 @@ SafeSex keeps running in the background, using very little memory and resources,
 and automatically keeps itself running across reboots (i.e. if you reboot with
 SafeSex running, it will come back on startup)
 
-Todo: 
-  - Go through and make sure all of the note contents are wiped 
-    from the RichEdit's memory blocks when they are freed.
-  - Code cleanup
+Todo:
+
+  * Go through and make sure all of the note contents are wiped from the RichEdit's memory blocks when they are freed.
+  * Code cleanup
 
 
 License
