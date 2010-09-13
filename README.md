@@ -19,7 +19,8 @@ in safesex.rc
 To comply to the license below, further changes to the original source can be found by diffing this repository.
 
 Todo: 
-- Find the bug that corrupts my longer notes, the same bug that's also the reason for me creating this repository.
+
+* Find the bug that corrupts my longer notes, the same bug that's also the reason for me creating this repository.
 
 
 SafeSex v0.35
