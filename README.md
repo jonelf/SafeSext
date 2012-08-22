@@ -1,6 +1,6 @@
 SafeSext 0.35.1
 ---------------
-Right now almost exactly the same as SafeSex 0.35 except it's migrated to [Microsoft Visual C++ 2010 Express.](http://www.microsoft.com/express/Downloads/Download-2010.aspx)
+Right now almost exactly the same as SafeSex 0.35 except it now compiles in Microsoft Visual Studio 2012.
 
 To make it compile I added
 
